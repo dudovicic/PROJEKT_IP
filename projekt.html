@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<title>Žepče</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Clicker+Script|Meie+Script" rel="stylesheet">	
+	<link href="rs-plugin/css/settings.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ambixo.css" rel="stylesheet">	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<script>
+window.onload = function () {
+ var images = [
+  "images/zepce5.jpg",
+  "images/zepce6.jpg",
+  "images/zepce7.jpg",
+  "images/zepce8.jpg",
+  "images/zepce10.jpg"
+]
+
+var imageHead = document.getElementById("image-head");
+var i = 0;
+
+setInterval(function() {
+      imageHead.style.backgroundImage = "url(" + images[i] + ")";
+      i = i + 1;
+      if (i == images.length) {
+      	i =  0;
+      }
+}, 3000);
+}
+  </script>
+  
+	
+</head>
+
+<body>
+
+
+  
+  <header role="banner" class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+              <a class="navbar-brand" href="#">  <a target="_blank" href="images/z_grb.png">
+				<img id="grb" src="images/z_grb.png"  title="coat of arms" width="60" height="79"></a></a>
+		</div>
+        <div class="navbar-inverse side-collapse in">
+          <nav role="navigation" class="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="http://localhost/PROJEKT_IP/projekt.html">Home</a></li>
+                <li><a href="http://localhost/PROJEKT_IP/interesting.php">Interesting</a></li>
+                <li><a href="http://localhost/PROJEKT_IP/gallery.html">Gallery</a></li>
+                <li><a href="http://localhost/PROJEKT_IP/contact.php">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+   
+ 
+
+<div class="section">
+  <div  class="slider">
+ <div id="image-head" class="image-head">
+  <div class="centering-hack">
+   <div  class="container slidercontent">
+     <h1 class="hero">Žepče</h1>
+      <h2 class="hero">The small city in heart of Bosnia</h2>
+	  </div>
+  </div>
+</div>
+    
+</div>
+  </div>
+</div>
+
+  
+ 
+    <section id="about-1" class="section-page">
+	<div class="container">
+           <div>
+            <div class="about col-sm-6">
+              <div class="wrap-about">
+                <h3>Žepče is the city and center of the municipality in Zenica-Doboj Canton, Bosnia and Herzegovina.</h3>
+               <p> Zepce is considered both a town and municipality in central Bosnia and Herzegovina, located between Doboj and Zenica. Zepce is located in a valley surrounded by mountains with Bosnia river flowing through town. By arriving in the Municipality of Zepce you may expect numerous sites of old excavations, numerous sources of water where you can enjoy natural beauty that will inspire you. Traditions and urban life are intertwined here, as well as the past and the present, and wonderful and pleasant hosts will give out a welcome only obtainable in Zepce area.
+               </p>  
+              </div>
+            </div>
+            <div class="about col-sm-6"><img class="img-responsive" src="img/man.png" alt="" /></div>
+          </div>
+      </div>
+    </section>
+  
+  
+</div>
+
+    <section id="parallax-1" class="container-fluid parallax fixed" style="background-image: url(images/zepce10.jpg)">
+    </section> 
+
+
+
+    <section id="about-1" class="section-page">
+
+	<div class="container">
+           <div>
+            <div class="about col-sm-6">
+              <div class="wrap-about">
+                <h3>Events</h3>
+                <p>
+                The most important events held in Zepce area are: "Street costume party", parade through the city and costume party in April, International chess tournament "Anto Markanović" - in May, Traditional "prela" - a traditional cultural event of historical and folk themes held during the summer in local communities Osova, Bistrica, Radunice Folklore Festival that takes place in the end of July in Zepce “Globaricka cycling race” a sporting event - driving leisure-type drives between Globarica - Zavidovici - Viniste - Žepče - Zavidovići Bistrica - Globarica, a distance of 49
+kilometers - in early August, Days of Indian summer Cultural and folklore event -
+the oldest folklore festival in this region, which has been held for 13 years (the end of August), "Fishermen's Night" - the cultural cuisine events to mark the Day of the Zepce Municipality on October 14th, International Cup "hook float" on October 14th
+                </p>
+                	  <div class="videoWrapper">
+                          <iframe width="560" height="349" src="https://www.youtube.com/embed/xDI0FsFQDm8" frameborder="0" allowfullscreen></iframe>
+                     </div>
+                <h3>Attractions</h3>
+                <p> Zepce area has numerous culinary delights very specific for this area. By visiting to Zepce, tourists usually taste homemade plum, cider and pear brandy, with the most famous pear brandy named "Karamut", which does not grow in the southern regions, and is known only in the wider region of Zepce and Doboj.</p>
+              </div>
+            </div>
+            <div class="about col-sm-6"><img class="img-responsive" src="img/man.png" alt="" /></div>
+          </div>
+      </div>
+    </section>
+	
+ 
+
+    <section id="parallax-9" class="container-fluid parallax fixed"> 
+      <div id="map-canvas"></div>
+    </section>  
+
+
+<section>
+<div id="footer">
+	<p>Webpage made by <a href="https://github.com/dudovicic" target="_blank">Dragana Udovičić</a></p>
+</div>
+</section>
+
+  
+    <p class="back-to-top"><i class="fa fa-chevron-up"></i></p>
+      
+
+   
+
+
+    <script>
+      $('.easy-pie-chart').easyPieChart({
+        animate: 2000,
+        scaleColor: false,
+        lineWidth: 20,
+        lineCap: 'square',
+        size: 180,
+        trackColor: '#3e383a',
+        barColor: '#D0C5BF',
+      });
+	  
+	
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVs_ULI5l79JhgXqNOXWqPoZbswMQqqCM&callback=initMap"></script>
+    <script> 
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(44.4295342,18.0306673);
+        var mapOptions = {
+          zoom: 4,
+          center: myLatlng,
+          scrollwheel: false 
+        }
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Here I Am!'
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+	
+
+	<script>
+	$(document).ready(function() {   
+            var sideslider = $('[data-toggle=collapse-side]');
+            var sel = sideslider.attr('data-target');
+            var sel2 = sideslider.attr('data-target-2');
+            sideslider.click(function(event){
+                $(sel).toggleClass('in');
+                $(sel2).toggleClass('out');
+            });
+        });
+</script>
+
+</body>
+</html>

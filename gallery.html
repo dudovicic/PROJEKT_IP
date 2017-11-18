@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+	 <link rel="stylesheet" type="text/css" href="style.css">
+	<title>Gallery</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script >
+	$(document).ready(function(){        
+	$('li img').on('click',function(){
+		var src = $(this).attr('src');
+		var img = '<img src="' + src + '" class="img-responsive"/>';
+		
+		var index = $(this).parent('li').index();   
+		
+		var html = '';
+		html += img;                
+		html += '<div style="height:25px;clear:both;display:block;">';
+		html += '<a class="controls next" href="'+ (index+2) + '">next &raquo;</a>';
+		html += '<a class="controls previous" href="' + (index) + '">&laquo; prev</a>';
+		html += '</div>';
+		
+		$('#myModal').modal();
+		$('#myModal').on('shown.bs.modal', function(){
+			$('#myModal .modal-body').html(html);
+			$('a.controls').trigger('click');
+		})
+		$('#myModal').on('hidden.bs.modal', function(){
+			$('#myModal .modal-body').html('');
+		});	
+		
+   });	
+})
+        
+         
+$(document).on('click', 'a.controls', function(){
+	var index = $(this).attr('href');
+	var src = $('ul.row li:nth-child('+ index +') img').attr('src');             
+	
+	$('.modal-body img').attr('src', src);
+	
+	var newPrevIndex = parseInt(index) - 1; 
+	var newNextIndex = parseInt(newPrevIndex) + 2; 
+	
+	if($(this).hasClass('previous')){               
+		$(this).attr('href', newPrevIndex); 
+		$('a.next').attr('href', newNextIndex);
+	}else{
+		$(this).attr('href', newNextIndex); 
+		$('a.previous').attr('href', newPrevIndex);
+	}
+	
+	var total = $('ul.row li').length + 1; 
+	//sakrij next tipku
+	if(total === newNextIndex){
+		$('a.next').hide();
+	}else{
+		$('a.next').show()
+	}            
+	//sakrij previouse tipku
+	if(newPrevIndex === 0){
+		$('a.previous').hide();
+	}else{
+		$('a.previous').show()
+	}
+	
+	
+	return false;
+});
+</script>
+  </head>
+  
+
+  <body class="background2">    
+  
+  
+  <header role="banner" class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+              <a class="navbar-brand" href="#">  <a target="_blank" href="images/z_grb.png">
+				<img id="grb" src="images/z_grb.png"  title="coat of arms" width="60" height="79"></a></a>
+		</div>
+        <div class="navbar-inverse side-collapse in">
+          <nav role="navigation" class="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="http://localhost/PROJEKT_IP/projekt.html">Home</a></li>
+        <li><a href="http://localhost/PROJEKT_IP/interesting.php">Interesting</a></li>
+        <li><a href="http://localhost/PROJEKT_IP/gallery.html">Gallery</a></li>
+        <li><a href="http://localhost/PROJEKT_IP/contact.php">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+   
+
+
+  <div class="section bg">
+  
+   <div class="container">    
+        <div class="row" style="text-align:center; border-bottom:1px dashed #ccc;  padding:0 0 20px 0; margin-bottom:40px;">
+            <h1>
+                Gallery
+        </h1>
+        <div class="jquery-script-ads" align="center"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+        </div>
+        
+        <ul class="row">
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija1.jpg">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija2.jpg">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija3.jpg">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija7.jpg">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija20.jpg">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija9.jpg">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija13.jpg">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija8.jpg">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija14.jpg">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija21.jpg">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija29.jpg">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija30.jpg">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija31.jpg">
+            </li>
+			<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija32.jpg">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="images/galerija36.jpg">
+            </li>
+            
+              
+          </ul>             
+    </div> 
+    </div>
+     
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">         
+          <div class="modal-body"> 		  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+		<!--izbornik-->
+	<script>
+	$(document).ready(function() {   
+            var sideslider = $('[data-toggle=collapse-side]');
+            var sel = sideslider.attr('data-target');
+            var sel2 = sideslider.attr('data-target-2');
+            sideslider.click(function(event){
+                $(sel).toggleClass('in');
+                $(sel2).toggleClass('out');
+            });
+        });
+</script>
+
+  </body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  
+</html>
